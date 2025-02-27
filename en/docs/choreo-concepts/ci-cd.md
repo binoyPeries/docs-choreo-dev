@@ -37,6 +37,9 @@ Choreo can replicate builds from an identical code version (Git commit). This me
 
 On the **Build** page, click **Build Latest**. If necessary, you have the option to select a particular commit and build an image.
 
+!!! note
+    Admin and Choreo DevOps users can trigger builds using specific tags from the connected Git repository. However, this action bypasses the standard branch-based deployment process and should only be used for critical, time-sensitive scenarios, as it can disrupt deployment track integrity.
+
 If you want to automatically trigger a build with each commit, you can enable **Auto Build on Commit**.
 
 ### Build logs
