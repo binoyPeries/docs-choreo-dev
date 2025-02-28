@@ -5,9 +5,10 @@ Choreo allows you to develop and deploy applications using your preferred progra
 A REST API is a web service that adheres to Representational State Transfer (REST) principles, using HTTP methods to access and manage resources. This guide walks you through building a Ballerina service component, deploying it on Choreo, and testing it with an HTTP client application.
 
 In this guide, you will:
-- Build a simple greeting service using a sample implementation. The service has a single resource named `greet` that accepts a query parameter as input.
-- Deploy the service in Choreo.
-- Test the service.
+
+ - Build a simple greeting service using a sample implementation. The service has a single resource named `greet` that accepts a query parameter as input.
+ - Deploy the service in Choreo.
+ - Test the service.
 
 ## Prerequisites
 
