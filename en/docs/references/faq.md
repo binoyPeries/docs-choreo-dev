@@ -33,7 +33,7 @@ You can find information about our support plans, including `free`, `basic`, and
 If you have a log monitoring product or service, such as Azure Monitor, you can use it together with Choreo. Note: The log monitoring tool is not included in the infrastructure cost.
 
 ### Q: What is the maximum request payload size supported by Choreo?
-Choreo allows a maximum request payload size of 10 MB. 
+Choreo allows a maximum request payload size of 50 MB.
 
 ### Q: What source control software does Choreo support?
 Choreo now supports GitHub, Bitbucket and GitLab. 
