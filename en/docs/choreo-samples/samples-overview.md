@@ -6,8 +6,15 @@ Choreo provides an extensive collection of samples for a wide range of use cases
 
 Before you use the samples, complete the following steps:
 
-- If you're signing in for the first time, follow these steps to create an organization and then create a project:  
-   1. Go to the [Choreo Console](https://console.choreo.dev/) and sign in using Google, GitHub, or Microsoft. 2. Enter a unique organization name. For example, `Stark Industries`. 3. Read and accept the privacy policy and terms of use. 4. Click **Create**. This creates an organization and takes you to its **Overview** page. 5. On the organization home page, click **+ Create Project**. 6. Enter a display name, unique name, and description for the project. 7. Click **Create**. This creates the project and takes you to its **Overview** page.
+- If you're signing in for the first time, follow these steps to create an organization and then create a project: 
+
+    1. Go to the [Choreo Console](https://console.choreo.dev/) and sign in using Google, GitHub, or Microsoft. 
+    2. Enter a unique organization name. For example, `Stark Industries`.
+    3. Read and accept the privacy policy and terms of use.
+    4. Click **Create**. This creates an organization and takes you to its **Overview** page.
+    5. On the organization home page, click **+ Create Project**.
+    6. Enter a display name, unique name, and description for the project.
+    7. Click **Create**. This creates the project and takes you to its **Overview** page.
 
 ## Explore the Choreo samples collection
 
