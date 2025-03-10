@@ -1,4 +1,4 @@
-# Consume a Service
+# Consume an OAuth2 Secured Service
 
 Choreo is a platform that allows you to create, deploy, and consume services seamlessly. The Choreo Developer Portal simplifies the process of discovering and using APIs for developers. 
 
