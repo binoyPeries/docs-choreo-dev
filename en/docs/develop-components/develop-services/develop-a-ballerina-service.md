@@ -42,8 +42,7 @@ To create a Ballerina service component, follow these steps:
 1. Go to [https://console.choreo.dev/](https://console.choreo.dev/) and sign in. This opens the **Project Home** page.
 2. If you already have one or more components in your project, click **+ Create**. Otherwise, proceed to the next step.
 3. Click the **Service** card.
-4. Connect to GitHub:
-   - Click **Authorize with GitHub** to connect your GitHub account. If you haven’t connected your GitHub repository to Choreo, enter your GitHub credentials and select the repository you forked in the prerequisites section to install the [Choreo GitHub App](https://github.com/marketplace/choreo-apps).
+4. Click **Authorize with GitHub** to connect your GitHub account. If you haven’t connected your GitHub repository to Choreo, enter your GitHub credentials and select the repository you forked in the prerequisites section to install the [Choreo GitHub App](https://github.com/marketplace/choreo-apps).
 
     !!! note
         The **Choreo GitHub App** requires the following permissions:

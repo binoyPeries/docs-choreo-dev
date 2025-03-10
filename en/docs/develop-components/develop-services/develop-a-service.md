@@ -46,9 +46,9 @@ To create a containerized service component, follow these steps:
 1. Go to [https://console.choreo.dev/](https://console.choreo.dev/) and sign in. This opens the project home page.
 2. If you already have one or more components in your project, click **+ Create**. Otherwise, proceed to the next step.
 3. Click the **Service** card.
-6. Click **Authorize with GitHub** to connect Choreo to your GitHub account. If you haven't connected your GitHub repository to Choreo, enter your credentials and select the repository you forked earlier to install the [Choreo GitHub App](https://github.com/marketplace/choreo-apps).
+4. Click **Authorize with GitHub** to connect Choreo to your GitHub account. If you haven't connected your GitHub repository to Choreo, enter your credentials and select the repository you forked earlier to install the [Choreo GitHub App](https://github.com/marketplace/choreo-apps).
 
-    Alternatively, select the Third-Party Git Repository and paste the [Choreo samples repository](https://github.com/wso2/choreo-samples) URL in the **Public Repository URL** field. However, enabling [**Auto Deploy**](https://wso2.com/choreo/docs/choreo-concepts/ci-cd/#deploy) requires authorizing the repository with the [Choreo GitHub App](https://github.com/marketplace/choreo-apps).
+    Alternatively, select the **Third-Party Git Repository** option and paste the [Choreo samples repository](https://github.com/wso2/choreo-samples) URL in the **Public Repository URL** field. However, enabling [**Auto Deploy**](https://wso2.com/choreo/docs/choreo-concepts/ci-cd/#deploy) requires authorizing the repository with the [Choreo GitHub App](https://github.com/marketplace/choreo-apps).
 
     !!! note
         The **Choreo GitHub App** requires:
@@ -57,7 +57,7 @@ To create a containerized service component, follow these steps:
 
         You can [revoke access](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/reviewing-your-authorized-integrations#reviewing-your-authorized-github-apps) at any time. Write access is only used for sending pull requests; Choreo will not push changes directly to your repository.
 
-7. Under **Connect Your Own Repository**, enter the following details:
+5. Under **Connect Your Own Repository**, enter the following details:
 
     | **Field**              | **Value**          |
     |------------------------|--------------------|
@@ -66,14 +66,14 @@ To create a containerized service component, follow these steps:
     | **Branch**             | main               |
     | **Component Directory** | `/greeting-service-go` |
 
-8. Select **Go** as the buildpack.
-9. Enter the following details:
+6. Select **Go** as the buildpack.
+7. Enter the following details:
 
     | **Field**                | **Value**              |
     |--------------------------|------------------------|
     | **Language Version**     | 1.x                    |
 
-4. Provide component display name, name and description:
+8. Provide component display name, name and description:
 
     !!! info
         The **Component Name** field must be unique and cannot be changed after creation.
@@ -84,7 +84,7 @@ To create a containerized service component, follow these steps:
     | **Component Name**        | greetings          |
     | **Description**           | Send greetings     |
 
-10. Click **Create**. This creates the component and lists it under **Component Listing** on the project home page.
+9. Click **Create**. This creates the component and lists it under **Component Listing** on the project home page.
 
 You have successfully created the service. The next step is to build and deploy it.
 
