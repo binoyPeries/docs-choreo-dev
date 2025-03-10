@@ -156,6 +156,7 @@ Now that the `Reading List Service` is deployed and available in the Choreo Mark
 
     !!! note
         The **Choreo GitHub App** requires:
+        
         - Read and write access to code and pull requests.
         - Read access to issues and metadata.
 
