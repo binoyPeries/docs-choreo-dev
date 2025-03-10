@@ -149,7 +149,7 @@ Follow the guidelines below based on your container registry:
 1. In the left navigation, click **Overview** and select your project. Alternatively, select your project from the **Project** list in the Choreo Console header. 
 2. Under **Component Listing** click **+ Create**.
 3. Select your component type (BYOI is only available for Service, Web Application, Scheduled Task, or Manual Task components). 
-4. From the Create Component pane, select the **Container Registry** under the **Connect your Docker Image** section.
+4. From the Create Component pane, select the **Container Registry** under the **Connect a Docker Image** section.
 5. Under **Deploy an image from Container Registry/Docker Hub**, select the container registry you have registered in [Step 1](#step-1-register-a-container-registry).
 6. Enter the full image URL. The image URL format in general is as follows:
    `[container-registry-host]/[repository-name]/[image-name]:[tag]`

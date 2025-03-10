@@ -45,7 +45,7 @@ For a video tutorial, see [Deploy a Static Web App on Choreo](https://www.youtub
 ## Step 2: Create a web application component
 
 1. On the project home page, click **Web Application** under **Create a Component**.
-2. Select **Authorize with GitHub** from the **Connect your Own Repository** section to connect Choreo to your GitHub account. If you haven't connected your GitHub repository to Choreo, enter your credentials and select the repository you forked earlier to install the [Choreo GitHub App](https://github.com/marketplace/choreo-apps).
+2. Select **Authorize with GitHub** from the **Connect a Git Repository** section to connect Choreo to your GitHub account. If you haven't connected your GitHub repository to Choreo, enter your credentials and select the repository you forked earlier to install the [Choreo GitHub App](https://github.com/marketplace/choreo-apps).
 
     Alternatively, paste the [choreo-sample-todo-list-app repository](https://github.com/wso2/choreo-sample-todo-list-app) URL in the **Provide Repository URL** field. However, enabling [**Auto Deploy**](https://wso2.com/choreo/docs/choreo-concepts/ci-cd/#deploy) requires authorizing the repository with the [Choreo GitHub App](https://github.com/marketplace/choreo-apps).
 
