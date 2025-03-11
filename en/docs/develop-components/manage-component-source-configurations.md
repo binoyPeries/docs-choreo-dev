@@ -130,7 +130,7 @@ Click the respective tab to view the structure for your current configuration fi
         To use custom environment variable names instead of Choreo's default ones, add the dependency as a `serviceReference` in your `component.yaml v1.1` file. You can copy the `serviceReference` section from the `component.yaml v1.0` tab and paste it under `dependencies` in your `component.yaml v1.1` file, which maintains backward compatibility with the v1.0 format.
 
     ### Runtime configurations
-    In the `configuration` section of the `component.yaml` file, you can define runtime configurations for the component. These configurations currently support environment variable injection related to dependencies.
+    In the `configurations` section of the `component.yaml` file, you can define runtime configurations for the component. These configurations currently support environment variable injection related to dependencies.
     
     | Configuration                 | Required     | Description                                                                       |
     |-------------------------------|--------------|-----------------------------------------------------------------------------------|
@@ -144,7 +144,7 @@ Click the respective tab to view the structure for your current configuration fi
     !!! note
         Runtime configurations are supported starting from `component.yaml v1.1`.
 
-        When an environment variable value is specified using `connectionRef`, the connection's environment variable is renamed to the environment variable name defined in the `configuration` section. For example, in the sample `component.yaml` file given above, the `CHOREO_HR_CONNECTION_SERVICEURL` variable in the `hr-connection` is renamed to `HR_SERVICE_URL`.
+        When an environment variable value is specified using `connectionRef`, the connection's environment variable is renamed to the environment variable name defined in the `configurations` section. For example, in the sample `component.yaml` file given above, the `CHOREO_HR_CONNECTION_SERVICEURL` variable in the `hr-connection` is renamed to `HR_SERVICE_URL`.
 
 === "Version 1.0"
 
