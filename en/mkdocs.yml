@@ -127,7 +127,8 @@ nav:
       - Develop Components With Git: develop-components/develop-components-with-git.md
       - Bring Your Own Image: develop-components/bring-your-own-image.md
       - Deploy an Application with Buildpacks: develop-components/deploy-an-application-with-buildpacks.md
-      - Deploy a Containerized Application: develop-components/deploy-a-containerized-application.md  
+      - Deploy a Containerized Application: develop-components/deploy-a-containerized-application.md
+      - Integrate Unit Tests into the Build Pipeline: develop-components/integrate-unit-tests-into-the-build-pipeline.md
       - Share and Reuse Components:
           - Create a Connection: develop-components/sharing-and-reusing/create-a-connection.md
           - Use a Connection in Your Service: develop-components/sharing-and-reusing/use-a-connection-in-your-service.md

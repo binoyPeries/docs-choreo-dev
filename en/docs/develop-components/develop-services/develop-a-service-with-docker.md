@@ -3,9 +3,10 @@
 Choreo allows you to create and deploy applications in any language. This guide demonstrates how to develop and deploy a containerized service component using a Dockerfile.
 
 In this guide, you will:
-- Create a containerized service component using a sample service implementation. The sample service has a single resource named `greet` that accepts a query parameter as input.
-- Deploy the service in Choreo using a Dockerfile. The service will run on port 9090.
-- Test the service.
+
+ - Create a containerized service component using a sample service implementation. The sample service has a single resource named `greet` that accepts a query parameter as input.
+ - Deploy the service in Choreo using a Dockerfile. The service will run on port 9090.
+ - Test the service.
 
 If you want to create a service component that exposes a Ballerina service, see [Develop a Ballerina Service](develop-a-ballerina-service.md).
 

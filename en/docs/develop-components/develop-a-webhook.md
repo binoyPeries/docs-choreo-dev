@@ -42,8 +42,7 @@ To create a Webhook component, follow these steps:
 
         You can [revoke access](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/reviewing-your-authorized-integrations#reviewing-your-authorized-github-apps) at any time. Write access is only used for sending pull requests; Choreo will not push changes directly to your repository.
 
-7. Select the **Access Mode** depending on your requirement.
-8. Enter the following information:
+7. Enter the following information:
 
     | **Field**                     | **Description**    |
     |-------------------------------|--------------------|
@@ -53,7 +52,7 @@ To create a Webhook component, follow these steps:
     | **Buildpack**                 | Ballerina          |
     | **Project Path**              | `github-event-to-email-webhook` |
 
-9. Click **Create**.
+8. Click **Create**.
 
 Choreo creates the Webhook component with the sample implementation and opens the component **Overview** page.
 
