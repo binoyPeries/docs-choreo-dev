@@ -57,9 +57,9 @@ To consume an API secured with an API Key, an API Key is required. To obtain an 
 3. Select the desired API that requires an API Key for access.
 4. This will take you to the API overview page, where you can manage credentials.
 
-#### Generating Environment-Specific API Keys.
+#### Generating API Keys.
 
-Choreo allows you to generate API keys for production and non-production environments.
+Choreo allows you to generate API keys for production and sandbox environments.
 
 !!! note
     Access to production endpoints may be restricted based on your user role. Ensure you have the required permissions before generating production keys.
@@ -70,7 +70,6 @@ Follow these steps to generate an API Key:
 2. If any API keys already exist, they will be listed here.
 3. Click **Generate API Key** and configure the following options:
     - **Key Name**: Provide a suitable name for the API key.
-    - **Environment**: Choose an environment (if multiple environments are configured for the API).
     - **Application**: Select an existing application or create a new one.
     - **Subscription Policy**: Choose an appropriate subscription policy.
 4. Click **Generate**. The newly created API Key will be displayed.
@@ -78,5 +77,7 @@ Follow these steps to generate an API Key:
 
 !!! note
     If the selected application is already subscribed to the chosen API, the subscription selection step will be skipped.
+    If multiple environments have been enabled for the API, then environment needs to be seletected during the API Key generation.
+
 
 Use this API Key to authenticate API requests by including it in the `api-key` header when invoking the API.
