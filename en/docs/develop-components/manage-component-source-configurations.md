@@ -68,7 +68,7 @@ Click the respective tab to view the structure for your current configuration fi
             # +required service identifer of the dependent component.
             resourceRef: service:/HRProject/UserComponent/v1/ad088/PUBLIC
       # +optional Defines runtime configurations
-      configuration:
+      configurations:
         # +optional List of environment variables to be injected into the component.
         env:
           # +required Name of the environment variable
