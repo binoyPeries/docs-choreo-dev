@@ -15,11 +15,13 @@ Choreo defines endpoints by combining port binding, protocol, endpoint name, net
 ## Configure endpoints
 The method of defining endpoints depends on the buildpack.
 
-* For `Ballerina` and `WSO2 MI` buildpacks, Choreo automatically detects the endpoint details for REST APIs. You can override the auto-generated configuration by providing a `component.yaml` file in the source directory.
+* For `Ballerina` and `WSO2 MI` buildpacks, Choreo automatically detects the endpoint details for REST APIs.
 * For all other buildpacks (Java, Python, NodeJS, Ruby, PHP, Go, Dockerfile, etc.), you can configure endpoints in one of the following ways:
   
     * **Using the Choreo Console**: If a `component.yaml` file is not present, you can define a basic endpoint configuration during component creation.
-    * **Using the component.yaml file**: You can manually define endpoints by placing a `component.yaml` file inside the `.choreo` directory at the build context path and committing it to the source repository.
+    * **Using the component.yaml file**: You can manually configure endpoint details by defining them in a `component.yaml` file, placing it inside the `.choreo` directory at the build context path, and committing it to the source repository.
+
+You can override UI-defined and auto-generated endpoints by providing a `component.yaml` file in the `.choreo` directory, which will take priority over other configurations.
 
 To learn about the `component.yaml` file, see [Overview of the component.yaml file](../develop-components/manage-component-source-configurations.md#overview-of-the-componentyaml-file).
 !!! note
