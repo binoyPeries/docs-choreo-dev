@@ -13,19 +13,15 @@ Choreo defines endpoints by combining port binding, protocol, endpoint name, net
 | Context (HTTP and GraphQL only) | A context path that you add to the endpoint's URL for routing purposes. |
 
 ## Configure endpoints
+The method of defining endpoints depends on the buildpack.
 
-The method of defining endpoints depends on the buildpack. For buildpacks other than `Ballerina` and `WSO2 MI`, it is required to have an `component.yaml` file in project root directory to create the Service component.
-
-### Configure endpoints with buildpacks (except Ballerina)
-
-When you build a service component using any other buildpacks(Java, Python, NodeJS, Ruby, PHP, Go, Dockerfile, etc) other than Ballerina and WSO2 MI, you can configure the endpoint details with the `component.yaml` source configuration file. You must place this file inside the `.choreo` directory at the build context path and commit it to the source repository.
+* For `Ballerina` and `WSO2 MI` buildpacks, Choreo automatically detects the endpoint details for REST APIs. You can override the auto-generated configuration by providing a `component.yaml` file in the source directory.
+* For all other buildpacks (Java, Python, NodeJS, Ruby, PHP, Go, Dockerfile, etc.), you can configure endpoints in one of the following ways:
+  
+    * **Using the Choreo Console**: If a `component.yaml` file is not present, you can define a basic endpoint configuration during component creation.
+    * **Using the component.yaml file**: You can manually define endpoints by placing a `component.yaml` file inside the `.choreo` directory at the build context path and committing it to the source repository.
 
 To learn about the `component.yaml` file, see [Overview of the component.yaml file](../develop-components/manage-component-source-configurations.md#overview-of-the-componentyaml-file).
-
-### Configure endpoints with the Ballerina buildpack
-
-When you create a service component with the `Ballerina buildpack`, Choreo automatically detects the endpoint details for REST APIs. You can override the auto-generated endpoint configuration by providing the `component.yaml` file in the source directory.
-
 !!! note
     Automatic endpoint generation is not supported for dynamic endpoint parameters such as variable ports. Therefore, you must use an `component.yaml` file to define dynamic endpoint parameters.
 
