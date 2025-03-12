@@ -55,8 +55,9 @@ You can use the generated token to invoke the API
 
     Use the access token as the Bearer token in the Authorization header.
 
+    Example:
     ```bash
-    curl -H "Authorization: Bearer YOUR_ACCESS_TOKEN" -X GET "<API_URL>"
+    curl -H "Authorization: Bearer <YOUR_ACCESS_TOKEN>" -X GET "https://my-sample-api.choreoapis.dev/greet"  
     ```
 
 
@@ -64,6 +65,7 @@ You can use the generated token to invoke the API
 
     Use the API key as the api-key header value in the request.
 
+    Example:
     ```bash
-    curl -H "api-key: YOUR_API_KEY" -X GET "<API_URL>"
+    curl -H "api-key: <YOUR_API_KEY>" -X GET "https://my-sample-api.choreoapis.dev/greet"
     ```

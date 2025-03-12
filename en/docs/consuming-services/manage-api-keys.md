@@ -1,6 +1,6 @@
 # Manage API Keys
 
-To consume a published API secured with an API Key, you must generate an API Key specifically for that API. This API Key serves as a unique identifier, allowing authorized access while ensuring security and control over API consumption.
+To access a published API secured with an API Key, you need to generate a dedicated API Key for that specific API. This key acts as a unique identifier, enabling authorized usage while maintaining security and control over how the API is consumed.  
 
 Once created, API Keys can be managed through two locations within the Choreo Developer Portal:
 
@@ -40,8 +40,7 @@ Follow these steps to generate an API Key:
 
 !!! note
     If the selected application is already subscribed to the chosen API, the subscription selection step will be skipped.
-    If multiple environments have been enabled for the API, then environment needs to be seletected during the API Key generation.
-
+    If multiple environments have been enabled for the API, a specific environment needs to be selected during the API Key generation.
 
 ## API key regeneration
 
