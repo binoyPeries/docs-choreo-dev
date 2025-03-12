@@ -8,12 +8,11 @@ The environments are listed in the order of deployment and promotion. The initia
 
 ### Prerequisites
 
-- To create additional environments, you must have a Choreo subscription or a private data plane.
 - To create a new environment in a private data plane organization, you must have the `ENVIRONMENT-MANAGEMENT` permission. By default, `ENVIRONMENT-MANAGEMENT` permission is granted to Admin and Choreo DevOps roles.
 
 To create a new environment, follow the steps given below:
 
-1. Sign in to the [Choreo Console](https://console.choreo.dev/) and switch to the organization where you want to create a new project. 
+1. Sign in to the [Choreo Console](https://console.choreo.dev/) and switch to the organization where you want to create a new environment. 
 2. In the left navigation menu, click **DevOps** and then click **Environments** (note that this is the **Environments** page under your organization, not your projects).
 3. On the **Environments** page, click **Create** and specify the following details to create a new environment:
    
