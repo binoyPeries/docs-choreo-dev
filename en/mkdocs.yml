@@ -86,6 +86,7 @@ nav:
   - Tutorials:
       - Expose a Service as a Managed API: tutorials/expose-a-service-as-a-managed-api.md
       - Secure an API with Role-Based Access Control: tutorials/secure-an-api-with-role-based-access-control.md
+      - Consume an API hosted in Choreo: tutorials/consume-an-api-hosted-in-choreo.md
   - Choreo Concepts:
       - Resource Hierarchy: choreo-concepts/resource-hierarchy.md
       - Organization: choreo-concepts/organization.md
@@ -181,9 +182,7 @@ nav:
       - Test APIs with Choreo API Chat: testing/test-apis-with-choreo-apichat.md
       - Test Components with Test Runner: testing/test-components-with-test-runner.md
   - Consuming Services:
-      - Consume a Service:
-          - API secured with OAuth2: consuming-services/consuming-a-sevice.md
-          - API secured with API Key: consuming-services/consuming-a-service-apikey.md
+      - Consume a Service: consuming-services/consuming-a-sevice.md
       - Manage Application: consuming-services/manage-application.md
       - Share Applications: consuming-services/share-applications.md
       - Manage Subscription: consuming-services/manage-subscription.md
