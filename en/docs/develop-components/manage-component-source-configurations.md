@@ -93,7 +93,7 @@ Click the respective tab to view the structure for your current configuration fi
     | **schemaVersion**    | Required     | The version of the `component.yaml` file. Defaults to the latest version.|
     | **endpoints**        | Optional     | The list of endpoint configurations.                                     |
     | **dependencies**     | Optional     | The list of dependency configurations.                                   |
-    | **configuration**    | Optional     | The runtime configuration definitions.                                   |
+    | **configurations**    | Optional     | The runtime configuration definitions.                                   |
 
     ### Endpoint configurations
     In the `endpoints` section of the `component.yaml` file, you can define multiple service endpoint configurations. Each endpoint must have a unique name and the required fields specified in the schema overview.
