@@ -6,15 +6,15 @@ You can configure alerts for each environment within your organization. You can 
 
 !!! info
     - You can configure a maximum of 10 alerts per component.
-    - Adding email addresses to an alert configuration is optional. If necessary, you can add a maximum of 5 email addresses per alert.
+    - You can add a maximum of 5 email addresses per alert.
 
-Alerts can be categorized as [latency alerts](#latency-alerts) , [traffic alerts](#traffic-alerts) , [resources alerts](#resources-alerts) , [logs alerts](#logs-alerts) and [build failure alerts](#build-failure-alerts).
+Alerts can be categorized as [latency alerts](#latency-alerts) , [traffic alerts](#traffic-alerts) , [resources alerts](#resources-alerts) , [logs alerts](#logs-alerts), [build failure alerts](#build-failure-alerts) and [status code alerts](#status-code-alerts).
 
 ## Supported Alert Types
 
 ### Latency alerts
 
-Latency alerts notify you if the response latency of an component exceeds a predefined threshold. This is useful for components that need to meet specific SLAs and for proactively identifying slow components.
+Latency alerts notify you if the response latency of a component exceeds a predefined threshold in a given time period. This is useful for components that need to meet specific SLAs and for proactively identifying slow components.
 
 Configurable Parameters:
 
@@ -77,8 +77,8 @@ Configurable Parameters:
 If you are going to create an alert for the first time, follow the steps given below.
 
 1. Sign in to the [Choreo Console](https://console.choreo.dev/).
-2. Ensure you are in the correct organization where you have a project with the component to configure a latency alert.
-3. Navigate to the component by clicking on the project with the component to configure a latency alert.
+2. Ensure you are in the correct organization where you have a project with the component to configure an alert.
+3. Navigate to the component by clicking on the project with the component to configure an alert.
 4. Click the component.
 
     !!! info
@@ -125,10 +125,21 @@ If you are going to create an alert for the first time, follow the steps given b
     !!! note
         when editing the alert, you can't edit the **Alert Type**, **Environment** and **Deployment Track**.
 
-## Alert History
+## Alert History & Notifications
 
-Alert history will show   **Configure Alerts** pane.
+### View Alert History
 
-![Configure Alerts](../assets/img/monitoring-and-insights/alerts/alert-history.png){.cInlineImage-full}
+You can check the past alerts that have triggered for your component when you click the  **Alerts History** pane in Choreo Alerts. You can filter the alert history by **Alert Type**, **Environment**, **Deployment Track** or **Version** and **Time Range**.
 
-Confirm your changes.
+!!! note  
+    When filtering, **API Proxy components** show a **Version** filter and Other components display a **Deployment Track** filter, based on their monitoring context.  
+
+You can click on an alert to expand it and see more details of the triggered alert.
+
+![Alerts History](../assets/img/monitoring-and-insights/alerts/alert-history.png){.cInlineImage-full}
+
+### Email Notifications
+
+When an alert is triggered, **recipients** added to the alert rule recieve an email with **alert details** including a direct **View Alert** link to Alert page in Choreo console.
+
+![Email Notification](../assets/img/monitoring-and-insights/alerts/email-notification.png){.cInlineImage-full}
