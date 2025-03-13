@@ -206,7 +206,6 @@ nav:
           - View DORA Metrics: monitoring-and-insights/delivery-insights/view-dora-metrics.md
       - Usage Insights: 
           - Insights Overview: monitoring-and-insights/insights-overview.md
-          - Configure Alerts: monitoring-and-insights/alerts/configure-alerts.md
           - Generate Custom Reports: monitoring-and-insights/generate-custom-reports.md
       - View Logs: monitoring-and-insights/view-logs.md
       - Work with the Choreo Insights API:
