@@ -86,6 +86,7 @@ nav:
   - Tutorials:
       - Expose a Service as a Managed API: tutorials/expose-a-service-as-a-managed-api.md
       - Secure an API with Role-Based Access Control: tutorials/secure-an-api-with-role-based-access-control.md
+      - Consume an API hosted in Choreo: tutorials/consume-an-api-hosted-in-choreo.md
   - Choreo Concepts:
       - Resource Hierarchy: choreo-concepts/resource-hierarchy.md
       - Organization: choreo-concepts/organization.md
@@ -187,6 +188,7 @@ nav:
       - Share Applications: consuming-services/share-applications.md
       - Manage Subscription: consuming-services/manage-subscription.md
       - Generate an Access Token: consuming-services/generate-an-access-token.md
+      - Manage API Keys: consuming-services/manage-api-keys.md
   - API Management:
       - Lifecycle Management: api-management/lifecycle-management.md
       - Documents: api-management/documents.md
