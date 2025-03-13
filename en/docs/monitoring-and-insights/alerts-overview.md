@@ -24,7 +24,7 @@ Configurable Parameters:
 
 ### Traffic alerts
 
-Traffic alerts notify you when the request count of an component exceeds a predefined threshold. This is useful for managing components with backend traffic limits or monetized backends that require proactive scaling based on incoming traffic.
+Traffic alerts notify you when the request count of a component exceeds a predefined threshold. This is useful for managing components with backend traffic limits or monetized backends that require proactive scaling based on incoming traffic.
 
 Configurable Parameters:
 
@@ -47,7 +47,7 @@ Configurable Parameters:
 
 ### Logs alerts
 
-Logs alerts trigger notifications when a specific phrase appears frequently in your component logs. This helps identify recurring issues or critical errors quickly, enabling faster troubleshooting.
+Logs alerts trigger notifications when a specific phrase appears frequently in your component logs. This helps to identify recurring issues or critical errors quickly, enabling faster troubleshooting.
 
 Configurable Parameters:
 
@@ -61,7 +61,7 @@ Build Failure alerts inform you if a build failure occurs for your component. Th
 
 ### Status Code alerts
 
-Alert you when your component returns specific HTTP errors (e.g., **403** Forbidden, **500** Internal Error). These alerts help detect issues affecting your component’s availability or speed.
+Status Code alert triggers when your component returns specific HTTP error(s) (e.g., **403** Forbidden, **500** Internal Error). These alerts help to detect issues affecting your component’s availability or speed.
 
 Configurable Parameters:
 
@@ -85,7 +85,7 @@ If you are going to create an alert for the first time, follow the steps given b
         make sure your component is deployed in order to make the alerts work.  
 
 5. In the Choreo Console left navigation menu, click **Observability**.
-6. In the left navigation menu on the **Observability** page, click **Alerts**. This opens the **Configure Alert** pane by default.
+6. In the left navigation menu on the **Observability** page, click **Alerts**. This opens the **Configure Alerts** pane by default.
 7. Click **Create Alert Rule** to create a new alert rule.
 
     ![Create Alert Rule](../assets/img/monitoring-and-insights/alerts/alert-creation.png){.cInlineImage-full}
@@ -102,21 +102,21 @@ If you are going to create an alert for the first time, follow the steps given b
     !!! tip
         The list includes all available options. If there are multiple metrics, you can select the required metric. If there is only one metric to choose, that metric is selected by default, and the field is disabled.
 
-12. In the **Threshold** field, specify the threshold in milliseconds.
+12. In the **Threshold** field, specify the threshold according to the given metric.
 
     !!! info
-        When the 95th percentile of the selected metric exceeds the threshold provided here, alerts are triggered.
+        When the selected metric exceeds the threshold provided, alerts are triggered.
 
-13. In the **Emails** field, specify the list of emails that should be notified when the alert is added.
+13. In the **Emails** field, specify the list of emails that should be notified when the alert is triggered.
 
     !!! note
         When adding an email, enter the required email and press enter to add it.
 
 14. In the **Advanced Configurations** dropdown, you can select the **Period**, the duration which the metric value must remain above the threshold
-15. You can alse see an **Explanation** window, telling what kind of an alert will generate based on your alert configurations.
+15. You can also see an **Explanation** window, showing the kind of an alert will generate based on your alert configurations.
 16. Click **Create**.
 
-17. Once an alert is successfully added, the alert will be listed in the **Configure Alerts** pane where all the alerts created so far for that component.
+17. Once an alert is successfully added, the alert will be listed in the **Configure Alerts** pane alongside all existing alerts for the component.
 
 18. Each alert can be **edited**, **removed** and **disabled** or **enabled** via this pane.
 
