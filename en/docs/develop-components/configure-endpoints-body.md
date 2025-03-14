@@ -74,3 +74,19 @@ To change the default endpoint of a component, follow the steps given below:
 6. In the **File Mount** pane that opens, click **Next**.
 7. In the **Endpoint Details** pane that opens, click the **Default Endpoint** list, select the endpoint you want to set as the default endpoint, and then click **Update**.
 8. Click **Deploy**. This deploys the component with the selected endpoint as the default, and the default URL will now correspond to this endpoint.  
+
+### Edit a UI-Defined Endpoint
+If you defined an endpoint during component creation, you can edit it later by following these steps:
+
+1. Sign in to the [Choreo Console](https://console.choreo.dev/).
+2. In the **Component Listing** pane, click on the component for which you want to update the endpoint.
+3. In the left navigation menu, click **Deploy**.
+4. On the **Deploy** page, go to the **Set Up** card and click **Configure & Deploy**.
+5. In the **Environment Configurations** pane that opens, click **Next**.
+6. In the **File Mount** pane that opens, click **Next**.
+7. In the **Endpoint Details** pane that opens, locate the endpoint you want to edit.
+8. Click the **Edit** icon next to the endpoint, modify the editable fields, and click **Update**.
+9. Click **Deploy** to apply the changes.
+
+!!! note
+     If you commit a `component.yaml` file, build the component, and proceed with deployment, the endpoints will be generated from the `component.yaml` file and will take priority. In this case, the endpoint cannot be edited through the UI. To modify the endpoint, you must update the`component.yaml` file.
