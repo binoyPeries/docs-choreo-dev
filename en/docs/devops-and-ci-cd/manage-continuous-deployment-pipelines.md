@@ -104,4 +104,8 @@ To change the default pipeline of a project, follow the steps given below:
 2. In the Choreo Console, go to the top navigation menu and click **Organization**. Then select your organization.
 3. Click the project you want to change the default pipeline.
 4. In the left navigation menu, click **DevOps** and then click **CD Pipelines**.
-5. Click **Set as Default** corresponding to the pipeline you want to set as the default pipeline for the project.
+5. Click **Set as Default** corresponding to the pipeline you want to set as the default pipeline for the project. This displays a confirmation dialog that details the impact of setting the new pipeline as the project default.
+6. Click **Confirm**.
+
+    !!! info "Note"
+        The **default** continuous deployment pipeline is configured separately at both the organization and project levels. When a project is created, it inherits the organization's **default** pipeline. The project's **default** pipeline then defines the default promotion order for its components on the Deploy page.
