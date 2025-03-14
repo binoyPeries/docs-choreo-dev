@@ -184,7 +184,9 @@ nav:
       - Test APIs with Choreo API Chat: testing/test-apis-with-choreo-apichat.md
       - Test Components with Test Runner: testing/test-components-with-test-runner.md
   - Consuming Services:
-      - Consume a Service: consuming-services/consuming-a-sevice.md
+      - Consume a Service: 
+          - Consume a service secured with API key: consuming-services/consuming-a-service-apikey.md
+          - Consume a service secured with OAuth2: consuming-services/consuming-a-sevice-oauth2.md
       - Manage Application: consuming-services/manage-application.md
       - Share Applications: consuming-services/share-applications.md
       - Manage Subscription: consuming-services/manage-subscription.md
@@ -419,7 +421,7 @@ plugins:
           'api-management/api-policies.md': 'https://wso2.com/choreo/docs/api-management/api-policies/about-api-policies/'
           'develop-components/develop-services/expose-a-websocket-endpoint-via-a-nodejs-service.md': 'https://wso2.com/choreo/docs/develop-components/develop-services/expose-a-websocket-endpoint-via-a-service/'
           'manage-databases-and-caches/billing-for-platform-services.md': 'https://wso2.com/choreo/docs/references/choreo-platform-services-billing-and-upgrades/'
-
+          'consuming-services/consuming-a-sevice-oauth2.md': 'https://wso2.com/choreo/docs/consuming-services/consuming-a-sevice/'
 extra_css:
   # - assets/lib/highlightjs/default.min.css
   # - assets/css/theme.css
