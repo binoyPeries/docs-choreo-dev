@@ -17,7 +17,7 @@ To consume an API secured with an API Key, an API Key is required. To obtain an 
 
 #### Generating API Keys.
 
-Choreo allows you to generate API keys for production and non-production environments.
+Choreo allows you to generate API keys for production and sandbox environments.
 
 !!! note
     Access to production endpoints may be restricted based on your user role. Ensure you have the required permissions before generating production keys.
@@ -45,3 +45,5 @@ Example:
 ```bash
 curl -H "api-key: <YOUR_API_KEY>" -X GET "https://my-sample-api.choreoapis.dev/greet"
 ```
+
+For managing API keys, see [Manage API Keys](./manage-api-keys.md)

@@ -35,7 +35,7 @@ Follow these steps to generate an access token for your application using cURL:
 
 6. Run the curl command to generate an access token.
 
-## Generate an access token via the Choreo Console (for testing)
+## Generate an access token via the Developer Portal UI (for testing)
 
 To generate an access token for **testing purposes**, follow these steps:
 

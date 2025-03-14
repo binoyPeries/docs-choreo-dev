@@ -31,7 +31,7 @@ Follow these steps to generate an access token for your application using cURL:
 
 6. Run the curl command to generate an access token.
 
-## Generate an access token via the Choreo Console (for testing)
+## Generate an access token via the Developer Portal UI (for testing)
 
 To generate an access token for **testing purposes**, follow these steps:
 
@@ -54,4 +54,4 @@ curl -H "Authorization: Bearer <YOUR_ACCESS_TOKEN>" -X GET "https://my-sample-ap
 ```
 
 !!! note
-    The required header for API authentication is configurable by the API provider and may differ from Authorization.
+    The name of the Authorization header may vary depending on the API provider’s configuration. Always refer to the API’s Swagger (OpenAPI) definition for the correct header format.
