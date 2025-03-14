@@ -2,125 +2,123 @@
 
 This section explains how you can configure alerts for your Choreo components. Setting up alerts allows you to proactively monitor your components ecosystem and take corrective measures when necessary.
 
-You can configure alerts for each environment within your organization. You can add, modify, or delete alerts per component. Optionally, you can specify a list of emails for each alert configuration.
+!!! tip
+    Setting up alerts in only available in the component level.
 
 !!! info
     - You can configure a maximum of 10 alerts per component.
     - You can add a maximum of 5 email addresses per alert.
 
-Alerts can be categorized as [latency alerts](#latency-alerts) , [traffic alerts](#traffic-alerts) , [resources alerts](#resources-alerts) , [logs alerts](#logs-alerts), [build failure alerts](#build-failure-alerts) and [status code alerts](#status-code-alerts).
+## Alert Types
 
-## Supported Alert Types
+Choreo supports the following types of alerts to help you monitor and manage your components effectively:
 
-### Latency alerts
+- [Latency alerts](#latency-alerts)
+- [Traffic alerts](#traffic-alerts)
+- [Resource alerts](#resource-alerts)
+- [Log alerts](#log-alerts)
+- [Build failure alerts](#build-failure-alerts)
+- [Status code alerts](#status-code-alerts)
+
+### Latency Alerts
 
 Latency alerts notify you if the response latency of a component exceeds a predefined threshold in a given time period. This is useful for components that need to meet specific SLAs and for proactively identifying slow components.
 
-Configurable Parameters:
+Configurable parameters
 
-- Metric: 99th, 95th, 90th or 50th percentile.
-- Threshold: Latency in milliseconds (e.g., 1800 ).
-- Period: Duration the threshold must be exceeded (e.g., 5 minutes).
+| **Parameter** | **Description**                                                                 |
+|---------------|---------------------------------------------------------------------------------|
+| Metric        | 99th, 95th, 90th, or 50th percentile.                                           |
+| Threshold     | Latency in milliseconds (e.g., 1800).                                           |
+| Period        | Duration the threshold must be exceeded (e.g., 5 minutes).                      |
 
-### Traffic alerts
+### Traffic Alerts
 
 Traffic alerts notify you when the request count of a component exceeds a predefined threshold. This is useful for managing components with backend traffic limits or monetized backends that require proactive scaling based on incoming traffic.
 
-Configurable Parameters:
+Configurable parameters
 
-- Threshold: Requests per minute (e.g., 200).
-- Period: Monitoring window (e.g., 5 minutes).
+| **Parameter** | **Description**                                                                 |
+|---------------|---------------------------------------------------------------------------------|
+| Threshold     | Requests per minute (e.g., 200).                                                |
+| Period        | Monitoring window (e.g., 5 minutes).                                            |
 
-### Resources alerts
+### Resource Alerts
 
 Resource alerts notify you when your component’s CPU or memory usage exceeds the defined thresholds. This ensures you can fix the resources allocations early to avoid performance issues or downtimes.
 
-Configurable Parameters:
+Configurable parameters
 
-- Metric: CPU or Memory.
-- Threshold: **mCPU** for CPU and **MiB** for Memory(e.g., 1000).
-- Period: Duration the threshold must be exceeded (e.g., 5 minutes).
+| **Parameter** | **Description**                                                                 |
+|---------------|---------------------------------------------------------------------------------|
+| Metric        | CPU or Memory.                                                                  |
+| Threshold     | **mCPU** for CPU and **MiB** for Memory(e.g., 1000).                            |
+| Period        | Duration the threshold must be exceeded (e.g., 5 minutes).                      |
 
-    !!! Tip
-        - **CPU**: mCPU (milliCPU) measures CPU usage in fractions of a core, where 1000m = 1 full core.
-        - **Memory**: MiB (Mebibyte) measures memory in binary units, where 1 MiB = 2^20^ bytes.
+!!! Tip
+    - **CPU**: mCPU (milliCPU) measures CPU usage in fractions of a core, where 1000m = 1 full core.
+    - **Memory**: MiB (Mebibyte) measures memory in binary units, where 1 MiB = 2^20^ bytes.
 
-### Logs alerts
+### Log Alerts
 
-Logs alerts trigger notifications when a specific phrase appears frequently in your component logs. This helps to identify recurring issues or critical errors quickly, enabling faster troubleshooting.
+Log alerts trigger notifications when a specific phrase appears **a specific number of times** in your component logs within a defined time window. This helps to identify recurring issues or critical errors quickly, enabling faster troubleshooting.
 
-Configurable Parameters:
+Configurable parameters
 
-- Search Phrase: Keyword or phrase (e.g., failed).
-- Count: Minimum occurrences to trigger the alert (e.g., 10).
-- Interval: Time window for counting occurrences (e.g., 5 minutes).
+| **Parameter** | **Description**                                                                 |
+|---------------|---------------------------------------------------------------------------------|
+| Search Phrase | Keyword or phrase to look for to trigger the alert (e.g., failed).                                               |
+| Count         | Minimum number of occurrences to trigger the alert (e.g., 10).                  |
+| Interval      | Time window for counting occurrences (e.g., 5 minutes).                         |
 
-### Build Failure alerts
+### Build Failure Alerts
 
-Build Failure alerts inform you if a build failure occurs for your component. This is essential for maintaining smooth development workflows, as it allows quick action to reduce downtime.
+Build failure alerts inform you if a build failure occurs for your component. This is essential for maintaining smooth development workflows.
 
-### Status Code alerts
+### Status Code Alerts
 
-Status Code alert triggers when your component returns specific HTTP error(s) (e.g., **403** Forbidden, **500** Internal Error). These alerts help to detect issues affecting your component’s availability or speed.
+Status code alert triggers when your component returns specific HTTP error(s) (e.g., **403** Forbidden, **500** Internal Error). These alerts help to detect issues affecting your component’s availability or speed.
 
-Configurable Parameters:
+Configurable parameters
 
-- Status Code: Error code or series (e.g., 400:Bad Request).
-- Count: Minimum occurrences (e.g., 5).
-- Interval: Time window (e.g., 5 minutes).
+| **Parameter** | **Description**                                                                 |
+|---------------|---------------------------------------------------------------------------------|
+| Status Code   | Error code or series (e.g., 400:Bad Request).                                   |
+| Count         | Minimum number of occurrences (e.g., 5).                                        |
+| Interval      | Time window (e.g., 5 minutes).                                                  |
 
 !!! note
-    Currently Status Code alerts only supports api proxy component types.
+    Status code alerts are only supported for API proxy component types.
 
 ## Configure Alert
 
-If you are going to create an alert for the first time, follow the steps given below.
+Follow these steps to configure an alert:
 
-1. Sign in to the [Choreo Console](https://console.choreo.dev/).
-2. Ensure you are in the correct organization where you have a project with the component to configure an alert.
-3. Navigate to the component by clicking on the project with the component to configure an alert.
-4. Click the component.
+1. Navigate to the component you wish to configure alerts for.
 
     !!! info
-        make sure your component is deployed in order to make the alerts work.  
+        you need to be a **Choreo DevOps** or **Choreo Platform Engineer** inorder to create Alerts.  
 
-5. In the Choreo Console left navigation menu, click **Observability**.
-6. In the left navigation menu on the **Observability** page, click **Alerts**. This opens the **Configure Alerts** pane by default.
-7. Click **Create Alert Rule** to create a new alert rule.
+2. In the Choreo left menu, click **Observability** and then click **Alerts**.
+3. Click **Create Alert Rule** to create a new alert rule.
 
     ![Create Alert Rule](../assets/img/monitoring-and-insights/alerts/alert-creation.png){.cInlineImage-full}
 
-    ![Create Alert Rule](../assets/img/monitoring-and-insights/alerts/alert-configuration.png){.cInlineImage-full}
-
-    This opens the **Alert Creation** page with the **Latency** alert type selected by default.
-
-8. Select the **[Alert Type](#supported-alert-types)** you want to create.
-9. Select the **Environment** you want to create the alert for.
-10. Select the **Deployment Track** as required.
-11. In the **Metric** field, select the required metric against which you want to evaluate the alert configuration.
-
-    !!! tip
-        The list includes all available options. If there are multiple metrics, you can select the required metric. If there is only one metric to choose, that metric is selected by default, and the field is disabled.
-
-12. In the **Threshold** field, specify the threshold according to the given metric.
-
-    !!! info
-        When the selected metric exceeds the threshold provided, alerts are triggered.
-
-13. In the **Emails** field, specify the list of emails that should be notified when the alert is triggered.
+4. Select the **[Alert Type](#alert-types)** you want to create.
+5. Select the **Environment** you want to create the alert for.
+6. Select the **Deployment Track** or **Version** as required for the component.
+7. Configure the remaining fields specific to your selected alert type.
+8. In the **Emails** field, specify the list of emails that should be notified when the alert is triggered.
 
     !!! note
-        When adding an email, enter the required email and press enter to add it.
+        - When adding an email, enter the required email and press enter to add it.
+        - You can add a maximum of 5 email addresses per alert.
 
-14. In the **Advanced Configurations** dropdown, you can select the **Period**, the duration which the metric value must remain above the threshold
-15. You can also see an **Explanation** window, showing the kind of an alert will generate based on your alert configurations.
-16. Click **Create**.
-
-17. Once an alert is successfully added, the alert will be listed in the **Configure Alerts** pane alongside all existing alerts for the component.
-
-18. Each alert can be **edited**, **removed** and **disabled** or **enabled** via this pane.
-
-    ![Configure Alerts](../assets/img/monitoring-and-insights/alerts/configure-alert-pane.png){.cInlineImage-full}
+9. You can configure additional parameters in **Advanced Configurations** dropdown as needed, which vary based on your alert type.
+10. The **Explanation window** provides a concise summary of the configured alert based on your alert configurations.
+11. Click **Create** to save and activate your alert rule.
+12. Once successfully added, your alert will be listed in the **Configure Alerts** pane alongside any existing alerts for the component.
+13. Each alert can be **edited**, **removed** and **disabled** or **enabled** via this pane.
 
     !!! note
         when editing the alert, you can't edit the **Alert Type**, **Environment** and **Deployment Track**.
@@ -136,10 +134,8 @@ You can check the past alerts that have triggered for your component when you cl
 
 You can click on an alert to expand it and see more details of the triggered alert.
 
-![Alerts History](../assets/img/monitoring-and-insights/alerts/alert-history.png){.cInlineImage-full}
-
 ### Email Notifications
 
-When an alert is triggered, **recipients** added to the alert rule recieve an email with **alert details** including a direct **View Alert** link to Alert page in Choreo console.
+When an alert is triggered, **recipients** added to the alert rule receive an email with **alert details** including a direct **View Alert** link to Alert page in Choreo console.
 
 ![Email Notification](../assets/img/monitoring-and-insights/alerts/email-notification.png){.cInlineImage-full}
