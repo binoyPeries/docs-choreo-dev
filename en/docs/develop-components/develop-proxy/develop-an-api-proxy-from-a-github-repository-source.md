@@ -47,7 +47,10 @@ You can create an API proxy either by selecting the source from a GitHub reposit
     | **Organization**       | Your GitHub account|
     | **Repository**         | choreo-samples     |
     | **Branch**             | **`main`**         |
-    | **API Directory**      | /choreo-samples/department-api-proxy-from-github |
+    | **API Directory**      | /department-api-proxy-from-github |
+
+    !!! note
+        To select the relevant directory, click on the **Edit** action next to the **API Directory** input field. Then, enter `department-api-proxy-from-github` as the directory name to quickly search and locate the correct directory.
 
 6. Specify the following values as Proxy Metadata:
 
@@ -80,7 +83,7 @@ You can create an API proxy either by selecting the source from a GitHub reposit
 ## Step 2: Build
 
 !!! info
-    An initial build starts automatically as soon as you create the API proxy.
+    The initial build starts automatically when you create the API proxy, and you will be redirected to the **Build** page. In this case, you can skip the steps below. If you need to manually trigger a build later, follow these steps.
 
 1. On the project home page, click on the `Department Service` component you created. This takes you to the component overview page.
 2. In the left navigation menu, click **Build**.
@@ -115,7 +118,7 @@ Choreo allows you to test your API proxy using either the [integrated OpenAPI Co
 
 1. In the left navigation menu, click **Test** and then click **OpenAPI Console**.
 2. Select **Development** from the environment drop-down list.
-3. Expand the `GET /{departmentId}` resource and click **Try it Out**.
+3. Expand the `GET /department/{departmentId}` resource and click **Try it Out**.
 4. Enter `1` as the **departmentId** and click **Execute**. You will see a response similar to the following:
 
     ![API proxy response](../../assets/img/develop-components/develop-a-rest-api-proxy/rest-api-proxy-response.png){.cInlineImage-full}
@@ -147,18 +150,11 @@ To generate credentials for the published API and invoke it via the Choreo Devel
 
 1. In the **Lifecycle** page, click **Go to Devportal**. This takes you to the `Department Service` in the Choreo Developer Portal.
 
-2. **Generate Credentials**:
-    1. In the Developer Portal left navigation menu, click **Production** under **Credentials**.
-    2. Click **Generate Credentials**. Choreo generates new tokens and populates the **Consumer Key** and **Consumer Secret** fields.
-
-    !!! tip
-        To test the API via an API test tool or through code, click **Generate Access Token** and copy the test token. Alternatively, click **cURL** and copy the generated cURL command to use via a cURL client. You do not need to generate an access token if you are testing the API via the **Try Out** capability in the Choreo Developer Portal.
-
-3. **Invoke the API**:
+2. **Invoke the API**:
     1. In the Developer Portal left navigation menu, click **Try Out**.
     2. In the **Endpoint** list, select **Development** as the environment to try out the API.
     3. Click **Get Test Key** to generate an access token.
-    4. Expand the `GET /{departmentId}` resource and click **Try it out**.
+    4. Expand the `GET /department/{departmentId}` resource and click **Try it out**.
     5. Enter `1` as the **departmentId** and click **Execute**. You will see a response similar to the following:
 
         ![Try out response](../../assets/img/develop-components/develop-a-rest-api-proxy/try-out-response.png){.cInlineImage-full}
