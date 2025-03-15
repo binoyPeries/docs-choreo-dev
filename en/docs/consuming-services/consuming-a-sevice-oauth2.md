@@ -1,18 +1,14 @@
-# Generate an Access Token
+# Consume a OAuth2 Secured Service
 
-Using access tokens for request authorization enhances security by preventing certain types of denial-of-service (DoS) attacks on published APIs. API consumers generate access tokens to access APIs, including them as string values in HTTP header requests.
+{% include "discovering-an-api-devportal.md" %}
 
-When you register an application in the Developer Portal, you can generate a consumer key and consumer secret. These credentials represent the application's identity. The consumer key acts as the unique identifier for the application, similar to a username, and is used to authenticate API requests. Choreo issues an access token for the application based on the consumer key.
+## Create an application
 
-This guide walks you through the steps to generate an access token for your application in Choreo.
+{% include "create-an-application.md" %}
 
-## Prerequisites
+## Subscribe to an API
 
-Before proceeding, ensure you have the following:
-
-1. An application in the [Choreo Developer Portal](https://devportal.choreo.dev). If you don’t have one, [create a new application](https://wso2.com/choreo/docs/consuming-services/manage-application/#step-1-create-an-application).
-2. [Generate keys for the application](https://wso2.com/choreo/docs/consuming-services/create-an-application/#step-2-generate-keys).
-3. [Subscribe APIs to the application](https://wso2.com/choreo/docs/consuming-services/create-a-subscription/#manage-subscriptions).
+{% include "create-a-subscription.md" %}
 
 ## Generate an access token via curl
 
@@ -46,3 +42,16 @@ To generate an access token for **testing purposes**, follow these steps:
 3. In the left navigation menu, click the desired environment under **Credentials**. This opens the **Application Keys** pane for that environment.
 
 4. Click **Generate Token** to create a test access token.
+
+## Consume an API
+
+Use this generated access token to authenticate API requests by including it in the `Bearer` header when invoking the API.
+
+Example:
+    
+```bash
+curl -H "Authorization: Bearer <YOUR_ACCESS_TOKEN>" -X GET "https://my-sample-api.choreoapis.dev/greet"  
+```
+
+!!! note
+    The name of the Authorization header may vary depending on the API provider’s configuration. Always refer to the API’s Swagger (OpenAPI) definition for the correct header format.
