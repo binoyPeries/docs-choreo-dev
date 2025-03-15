@@ -60,7 +60,7 @@ You can create an API proxy either by selecting the source from a GitHub reposit
     | **Field**       | **Value**                                  |
     |-----------------|--------------------------------------------|
     | **Context**     | `department-service`                                   |
-    | **Version**     | `1.0`                                      |
+    | **Version**     | `v1.0`                                      |
     | **Target**      | `https://samples.choreoapps.dev/company/hr`|
 
 7. Specify the following values as Component Details:
