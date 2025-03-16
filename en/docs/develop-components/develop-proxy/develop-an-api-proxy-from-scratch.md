@@ -33,7 +33,7 @@ To create an API proxy, you can either upload an OpenAPI specification or provid
     | **Field**       | **Value**                                  |
     |-----------------|--------------------------------------------|
     | **Context**     | `department-service`                                   |
-    | **Version**     | `1.0`                                      |
+    | **Version**     | `v1.0`                                      |
     | **Target**      | `https://samples.choreoapps.dev/company/hr` |
 
 6. Enter following details for the Component Details:
