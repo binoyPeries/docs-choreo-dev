@@ -16,7 +16,7 @@ By leveraging these insights, businesses can make informed decisions to enhance 
 
 ## View insights
 
-To view usage insights, go to the [Choreo Console](https://console.choreo.dev/) and click **Usage Insights** in the left navigation menu.
+To view usage insights, go to the [Choreo Console](https://console.choreo.dev/) and click **Insights** and then click **Usage** in the left navigation menu.
 
 If you are viewing insights on the Choreo platform at the organization level, note the following:
 
