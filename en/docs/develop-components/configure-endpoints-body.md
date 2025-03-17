@@ -13,19 +13,17 @@ Choreo defines endpoints by combining port binding, protocol, endpoint name, net
 | Context (HTTP and GraphQL only) | A context path that you add to the endpoint's URL for routing purposes. |
 
 ## Configure endpoints
+The method of defining endpoints depends on the buildpack.
 
-The method of defining endpoints depends on the buildpack. For buildpacks other than `Ballerina` and `WSO2 MI`, it is required to have an `component.yaml` file in project root directory to create the Service component.
+* For `Ballerina` and `WSO2 MI` buildpacks, Choreo automatically detects the endpoint details for REST APIs.
+* For all other buildpacks (Java, Python, NodeJS, Ruby, PHP, Go, Dockerfile, etc.), you can configure endpoints in one of the following ways:
+  
+    * **Using the Choreo Console**: If a `component.yaml` file is not present, you can define a basic endpoint configuration during component creation.
+    * **Using the component.yaml file**: You can manually configure endpoint details by defining them in a `component.yaml` file, placing it inside the `.choreo` directory at the build context path, and committing it to the source repository.
 
-### Configure endpoints with buildpacks (except Ballerina)
-
-When you build a service component using any other buildpacks(Java, Python, NodeJS, Ruby, PHP, Go, Dockerfile, etc) other than Ballerina and WSO2 MI, you can configure the endpoint details with the `component.yaml` source configuration file. You must place this file inside the `.choreo` directory at the build context path and commit it to the source repository.
+You can override UI-defined and auto-generated endpoints by providing a `component.yaml` file in the `.choreo` directory, which will take priority over other configurations.
 
 To learn about the `component.yaml` file, see [Overview of the component.yaml file](../develop-components/manage-component-source-configurations.md#overview-of-the-componentyaml-file).
-
-### Configure endpoints with the Ballerina buildpack
-
-When you create a service component with the `Ballerina buildpack`, Choreo automatically detects the endpoint details for REST APIs. You can override the auto-generated endpoint configuration by providing the `component.yaml` file in the source directory.
-
 !!! note
     Automatic endpoint generation is not supported for dynamic endpoint parameters such as variable ports. Therefore, you must use an `component.yaml` file to define dynamic endpoint parameters.
 
@@ -76,3 +74,19 @@ To change the default endpoint of a component, follow the steps given below:
 6. In the **File Mount** pane that opens, click **Next**.
 7. In the **Endpoint Details** pane that opens, click the **Default Endpoint** list, select the endpoint you want to set as the default endpoint, and then click **Update**.
 8. Click **Deploy**. This deploys the component with the selected endpoint as the default, and the default URL will now correspond to this endpoint.  
+
+### Edit a UI-Defined Endpoint
+If you defined an endpoint during component creation, you can edit it later by following these steps:
+
+1. Sign in to the [Choreo Console](https://console.choreo.dev/).
+2. In the **Component Listing** pane, click on the component for which you want to update the endpoint.
+3. In the left navigation menu, click **Deploy**.
+4. On the **Deploy** page, go to the **Set Up** card and click **Configure & Deploy**.
+5. In the **Environment Configurations** pane that opens, click **Next**.
+6. In the **File Mount** pane that opens, click **Next**.
+7. In the **Endpoint Details** pane that opens, locate the endpoint you want to edit.
+8. Click the **Edit** icon next to the endpoint, modify the editable fields, and click **Update**.
+9. Click **Deploy** to apply the changes.
+
+!!! note
+     If you commit a `component.yaml` file, build the component, and proceed with deployment, the endpoints will be generated from the `component.yaml` file and will take priority. In this case, the endpoint cannot be edited through the UI. To modify the endpoint, you must update the`component.yaml` file.
